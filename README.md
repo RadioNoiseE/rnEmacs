@@ -1,3 +1,5 @@
+<p align="center"><img src="https://radionoisee.github.io/img/emacs-mac-01.png" loading="lazy" width="85%"></p>
+
 ## Introduction
 
 Clean Emacs configuration close to vanilla. For use on Mach-O, but should also work on *nix.
@@ -10,23 +12,23 @@ It contains keyboard macros for the JIS keyboard.
 ## Installation
 
 ```bash
-    git clone https://github.com/RadioNoiseE/rnEmacs.git $HOME/.emacs.d
+git clone https://github.com/RadioNoiseE/rnEmacs.git $HOME/.emacs.d
 ```
 
 Then you are about to bootstrap it.
 
 ```bash
-    emacs --script $HOME/.emacs.d/bootstrap.el
+emacs --script $HOME/.emacs.d/bootstrap.el
 ```
 
 To install grammars for tree-sitter, launch Emacs then <kbd>M-x treesit-install-language-grammar <LANG> RET</kbd>. To install all available grammars, evaluate:
 
 ```bash
-    (mapc #'treesit-install-language-grammar (mapcar #'car treesit-language-source-alist))
+(mapc #'treesit-install-language-grammar (mapcar #'car treesit-language-source-alist))
 ```
 
 Beware of the NSFW splash image.
 
 ```bash
-    rm $HOME/.emacs.d/spl.png
+rm $HOME/.emacs.d/spl.png
 ```
