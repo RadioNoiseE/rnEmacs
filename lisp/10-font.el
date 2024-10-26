@@ -4,6 +4,7 @@
   (when (display-graphic-p)
     (set-face-attribute 'default nil :family "Cascadia Code")
     (set-face-attribute 'fixed-pitch nil :family "IBM 3270")
+    (set-face-attribute 'variable-pitch nil :family "IBM Plex Serif")
     (add-to-list 'face-font-rescale-alist '("IBM 3270" . 1.14))))
 
 (add-hook 'window-setup-hook #'font-inject)
