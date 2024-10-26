@@ -4,7 +4,6 @@
 ;; for which emacs is bootstraped.
 
 (defun gen-env-file (path)
-  "Read environment variables to PATH."
   (let ((dirname (file-name-directory path)))
     (make-directory dirname t))
   (with-temp-file path

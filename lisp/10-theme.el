@@ -16,7 +16,6 @@
                                    (t variable-pitch 1.1))))
 
 (defun ef-themes-mode-line-patch ()
-  "Tweak the style of the mode lines."
   (ef-themes-with-colors
     (custom-set-faces
      `(mode-line ((,c :background ,bg-mode-line :foreground ,fg-mode-line :box (:line-width 1 :color ,fg-dim))))

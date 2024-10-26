@@ -1,7 +1,6 @@
 ;; darwin compatibility
 
 (defun load-env-file (file)
-  "Load environment variables from FILE."
   (if (null (file-exists-p file))
       (signal 'file-error
               (list "File not found" file

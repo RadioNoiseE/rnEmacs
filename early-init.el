@@ -8,4 +8,19 @@
   (add-hook 'emacs-startup-hook
             (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
 
+(setq read-process-output-max (* 1024 1024 2))
+
+(setq visual-bell t
+      display-time-default-load-average nil
+      frame-inhibit-implied-resize t
+      frame-resize-pixelwise t
+      default-frame-alist '((ns-transparent-titlebar . t)
+                            (vertical-scroll-bar . nil)
+                            (horizontal-scroll-bar . nil)))
+
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(tooltip-mode -1)
+(menu-bar-mode -1)
+
 ;;; early-init.el ends here
