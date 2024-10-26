@@ -7,7 +7,7 @@
     (set-face-attribute 'variable-pitch nil :family "IBM Plex Serif")
     (add-to-list 'face-font-rescale-alist '("IBM 3270" . 1.12))))
 
-(setq default-text-properties '(line-spacing 0.08 line-height 1.04))
+(setq default-text-properties '(line-spacing 0.072))
 
 (add-hook 'window-setup-hook #'font-inject)
 (add-hook 'server-after-make-frame-hook #'font-inject)
