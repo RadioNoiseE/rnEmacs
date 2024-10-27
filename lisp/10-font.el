@@ -4,13 +4,17 @@
   (when (display-graphic-p)
     (set-face-attribute 'default nil :family "Cascadia Code")
     (set-face-attribute 'fixed-pitch nil :family "IBM 3270")
-    (set-face-attribute 'variable-pitch nil :family "IBM Plex Serif")
-    (add-to-list 'face-font-rescale-alist '("IBM 3270" . 1.12))))
+    (set-face-attribute 'variable-pitch nil :family "IBM Plex Serif")))
 
-(setq default-text-properties '(line-spacing 0.072))
+(defun minibuffer-fix-pitch ()
+  (face-remap-add-relative 'fixed-pitch '(:height 0.95)))
+
+(add-to-list 'face-font-rescale-alist '("IBM 3270" . 1.14))
+(font-inject)
 
 (add-hook 'window-setup-hook #'font-inject)
 (add-hook 'server-after-make-frame-hook #'font-inject)
+(add-hook 'minibuffer-mode-hook #'minibuffer-fix-pitch)
 
 (use-package ligature
   :config
